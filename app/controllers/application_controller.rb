@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
 
   def current_cart
     @current_cart ||= find_cart
+<<<<<<< HEAD
   end
 
   private
@@ -23,4 +24,18 @@ class ApplicationController < ActionController::Base
     session[:cart_id] = cart.id
     return cart
   end
+=======
+end
+
+private
+
+def find_cart
+  cart = Cart.find_by(id: session[:cart_id])
+  if cart.blank?
+    cart = Cart.create
+  end
+  session[:cart_id] = cart.id
+  return cart
+end
+>>>>>>> story4.1
 end

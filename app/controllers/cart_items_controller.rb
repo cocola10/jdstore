@@ -7,7 +7,11 @@ class CartItemsController < ApplicationController
     @product = @cart_item.product
     @cart_item.destroy
 
+<<<<<<< HEAD
     flash[:warning] = "成功将 #{@product.title} 从购物车删除!"
+=======
+    flash[:warning] = "成功将 #{@product.title} 从购物车删除！"
+>>>>>>> story4.1
     redirect_to :back
   end
 
@@ -22,7 +26,11 @@ class CartItemsController < ApplicationController
   end
 
     redirect_to carts_path
+<<<<<<< HEAD
   end
+=======
+end
+>>>>>>> story4.1
 
 private
 

@@ -13,9 +13,15 @@ resources :products do
 end
 
 resources :carts do
+<<<<<<< HEAD
   collection do
     delete :clean
   end
+=======
+collection do
+  delete :clean
+end
+>>>>>>> story4.1
 end
 
 resources :cart_items
